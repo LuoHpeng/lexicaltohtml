@@ -4,6 +4,7 @@
 * 转的字符串不包含样式及head,html标签，需要自定义 默认Style 自行拼接，style放在head中
 * style中的样式可以自定义，与LexicalFormatEnum对象属性一一对应
 * 还有部分lexical标签暂时不支持，比如 image等，可以自行添加
+* text下有测试用例可以执行
   ```
   
      <style>
