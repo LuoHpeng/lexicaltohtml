@@ -1,0 +1,37 @@
+package com.example.lexicaltohtml;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import lexical.html.convert.HtmlConverterFactory;
+import lexical.model.HtmlNode;
+import lexical.model.RTFText;
+import lexical.resolver.convert.LexicalConverterFactory;
+
+/**
+ * @author lhp
+ * @version Test.java create at 2024-03-11 16:18:28 by lhp
+ * @since 1.0.0
+ */
+public class Test {
+
+
+  public static void main(String[] args){
+
+    String aa ="{\"root\":{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"      公司（以下简称“”或“我们”），\",\"type\":\"text\",\"version\":1},{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"color: rgba(208, 11, 11, 1);\",\"text\":\"一向重视\",\"type\":\"text\",\"version\":1},{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"用户（“您”）的个人信息及\",\"type\":\"text\",\"version\":1},{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"background-color: rgba(237, 24, 24, 0);\",\"text\":\"隐私的保护\",\"type\":\"text\",\"version\":1},{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"，我们深知个人信息对您的重要性，并严格遵循法律法规，竭力保障您的信息安全。鉴于此，我们制定本隐私并提醒您：本隐私政策适用于如下向\",\"type\":\"text\",\"version\":1},{\"detail\":0,\"format\":15,\"mode\":\"normal\",\"style\":\"\",\"text\":\"您提供的\",\"type\":\"text\",\"version\":1},{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"产品或服务，以及所对应的各项个人信息处理活动，包括但不限于：APP、小程序（以下统称“产品或服务”）。您在使用我们的产品或服务时，我们会收集和使用您相关的个人信息，我们希望通过本隐私政策向您说明我们在您使\",\"type\":\"text\",\"version\":1},{\"detail\":0,\"format\":8,\"mode\":\"normal\",\"style\":\"\",\"text\":\"用我们的产\",\"type\":\"text\",\"version\":1},{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"品或服务时如何收集、使用、保存、提供、删除、共享和转让这些个人信息，以及我们为您提供的查询、复制、删除和保护这些信息的方式。\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"left\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"      如果您有任何疑问或建议，请通过以下联系方式与我们联系：\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"left\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"      邮箱：data123@dd.com\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"left\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"children\":[],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1},{\"children\":[{\"children\":[{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"123\",\"type\":\"text\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":3},{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"中文\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":1},{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"fg\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":1},{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"56\",\"type\":\"text\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":1},{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"cd\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablerow\",\"version\":1},{\"children\":[{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"34\",\"type\":\"text\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":2},{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"wd\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":0},{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"de\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":0},{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"er\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":0},{\"children\":[{\"children\":[{\"detail\":0,\"format\":0,\"mode\":\"normal\",\"style\":\"\",\"text\":\"ff\",\"type\":\"text\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablecell\",\"version\":1,\"colSpan\":1,\"rowSpan\":1,\"backgroundColor\":null,\"headerState\":0}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"tablerow\",\"version\":1}],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"table\",\"version\":1},{\"children\":[],\"direction\":null,\"format\":\"\",\"indent\":0,\"type\":\"paragraph\",\"version\":1}],\"direction\":\"ltr\",\"format\":\"\",\"indent\":0,\"type\":\"root\",\"version\":1}}";
+    GsonBuilder builder = new GsonBuilder();
+    Gson gson = builder.create();
+    RTFText rtfText = gson.fromJson(aa, RTFText.class);
+    List<HtmlNode> htmlNodes = new ArrayList<>();
+    LexicalConverterFactory.convert(rtfText.getRoot().getChildren(), htmlNodes);
+    String convert = HtmlConverterFactory.convert(htmlNodes);
+    System.out.println(convert);
+  }
+
+
+}
